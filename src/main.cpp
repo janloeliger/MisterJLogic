@@ -5,7 +5,7 @@
 #include "sim/circuit.h"
 #include "sim/simulator.h"
 #include "sim/parts/clockSource.h"
-#include "sim/notGate.h"
+#include "sim/parts/ic/notGate.h"
 #include "sim/Net.h"
 
 static const char* levelToStr(sim::LogicLevel v)

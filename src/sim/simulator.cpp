@@ -1,6 +1,6 @@
 #include "simulator.h"
 
-#include "part.h"
+#include "parts/part.h"
 #include "net.h"
 
 #include <vector>

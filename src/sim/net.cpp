@@ -1,5 +1,5 @@
 #include "net.h"
-#include "part.h"
+#include "parts/part.h"
 
 #include <algorithm>
 

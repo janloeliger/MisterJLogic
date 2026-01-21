@@ -1,7 +1,7 @@
 #include "Circuit.h"
 
 #include "net.h"
-#include "part.h"
+#include "parts/part.h"
 
 #include <stdexcept>
 
