@@ -3,7 +3,7 @@
 namespace sim
 {
     NandGate::NandGate(std::string instanceName)
-        : IcPart("NAND", std::move(instanceName), PartKind::IC)
+        : IcPart("NAND", std::move(instanceName))
     {
         addPin("A", PinDir::Input);   // 0
         addPin("B", PinDir::Input);   // 1
@@ -20,8 +20,8 @@ namespace sim
         LogicLevel a = read(0);
         LogicLevel b = read(1);
 
-        LogicLevel t = logicAnd(a, b);
-        LogicLevel y = logicNot(t);
+        LogicLevel andResult = logicAnd(a, b);
+        LogicLevel y = logicNot(andResult);
 
         setLogicLevel(2, y);
     }

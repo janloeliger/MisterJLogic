@@ -3,7 +3,7 @@
 namespace sim
 {
     OrGate::OrGate(std::string instanceName)
-        : IcPart("OR", std::move(instanceName), PartKind::IC)
+        : IcPart("OR", std::move(instanceName))
     {
         addPin("A", PinDir::Input);   // 0
         addPin("B", PinDir::Input);   // 1

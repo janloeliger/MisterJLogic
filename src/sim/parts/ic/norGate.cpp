@@ -3,7 +3,7 @@
 namespace sim
 {
     NorGate::NorGate(std::string instanceName)
-        : IcPart("NOR", std::move(instanceName), PartKind::IC)
+        : IcPart("NOR", std::move(instanceName))
     {
         addPin("A", PinDir::Input);   // 0
         addPin("B", PinDir::Input);   // 1
@@ -20,8 +20,8 @@ namespace sim
         LogicLevel a = read(0);
         LogicLevel b = read(1);
 
-        LogicLevel t = logicOr(a, b);
-        LogicLevel y = logicNot(t);
+        LogicLevel orResult = logicOr(a, b);
+        LogicLevel y = logicNot(orResult);
 
         setLogicLevel(2, y);
     }

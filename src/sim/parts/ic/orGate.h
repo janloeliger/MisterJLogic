@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../icPart.h"
+#include "icPart.h"
 
 namespace sim
 {

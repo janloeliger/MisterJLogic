@@ -1,5 +1,5 @@
 #include "part.h"
-#include "net.h"
+#include "../net.h"
 #include <stdexcept>
 
 namespace sim

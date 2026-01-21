@@ -3,7 +3,7 @@
 namespace sim
 {
     XorGate::XorGate(std::string instanceName)
-        : IcPart("XOR", std::move(instanceName), PartKind::IC)
+        : IcPart("XOR", std::move(instanceName))
     {
         addPin("A", PinDir::Input);   // 0
         addPin("B", PinDir::Input);   // 1

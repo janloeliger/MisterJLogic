@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../part.h"
+#include "Icpart.h"
 
 namespace sim
 {
-    class NotGate : public Part
+    class NotGate : public IcPart
     {
     public:
         explicit NotGate(std::string instanceName);

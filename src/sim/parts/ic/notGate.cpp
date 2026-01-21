@@ -3,9 +3,8 @@
 namespace sim
 {
     NotGate::NotGate(std::string instanceName)
-        : Part("NOT", std::move(instanceName), PartKind::IC)
+        : IcPart("NOT", std::move(instanceName))
     {
-        // Two pins: A input, Y output
         addPin("A", PinDir::Input);
         addPin("Y", PinDir::Output);
     }
@@ -16,30 +15,10 @@ namespace sim
         setLogicLevel(1, LogicLevel::unconnected);
     }
 
-    LogicLevel NotGate::invert(LogicLevel in) const
-    {
-        if (in == LogicLevel::High)
-        {
-            return LogicLevel::Low;
-        }
-
-        if (in == LogicLevel::Low)
-        {
-            return LogicLevel::High;
-        }
-
-        if (in == LogicLevel::unconnected)
-        {
-            return LogicLevel::unconnected;
-        }
-
-        return LogicLevel::X;
-    }
-
     void NotGate::onTick()
     {
         LogicLevel a = read(0);
-        LogicLevel y = invert(a);
+        LogicLevel y = logicNot(a);
 
         setLogicLevel(1, y);
     }
